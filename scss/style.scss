@@ -156,7 +156,7 @@ main {
             color: #717171;
         }
 
-        &--list {
+        &-list {
          display: inline-flex;
          gap: 10vw;
         }
@@ -165,8 +165,11 @@ main {
 
     &__feature {
 
-        &--item {
+        &-item {
             margin-top: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            padding: 10px;
         }
 
         &-image {
@@ -183,5 +186,130 @@ main {
             font-size: 1rem;
             color: #717171;
         }
+    }
+}
+
+.page {
+    margin-top: 80px;
+}
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 144px 0px 144px;
+    gap: auto;
+
+    &__title {
+        color: #4D4D4D;
+        font-size: 2rem;
+    }
+
+    &__subtitle {
+        margin-top: 20px;
+        color: #717171;
+        font-size: 1rem;
+    }
+
+    &__button {
+        margin-top: 32px;
+        width: 151px;
+        height: 52px;
+        color: #F5F7FA;
+        border-radius: 4px;
+        font-size: 1rem;
+        background-color: #4CAF4F;
+    }
+}
+
+.stats {
+    background-color: #F5F7FA;
+    display: flex;
+    padding: 64px 144px 64px 144px;
+    
+    align-items: center;
+    justify-content: space-evenly;
+
+    &__title {
+        font-size: 2rem;
+    }
+
+    &__subtitle {
+        font-size: 0.9rem;
+    }
+
+    &__list {
+        display: grid;
+        gap: 30px 50px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    &__item {
+        display: inline-flex;
+        gap: 16px;
+    }
+
+    &__number {
+        font-size: 1.5rem;
+        margin-bottom: 5px;
+        color: #4D4D4D;
+    }
+
+    &__label {
+        font-size: 1rem;
+        color: #717171;
+    }
+
+
+}
+
+.process {
+
+    &__media {
+
+    }
+
+    &__img {
+
+    }
+
+    &__content {
+
+    }
+
+    &__title {
+
+    }
+
+    &__subtitle {
+
+    }
+
+    &__button {
+        
+    }
+}
+
+
+
+
+.cta {
+    text-align: center;
+    font-size: 2rem;
+    padding: 32px 0px 32px 0px;
+
+    &__title {
+        margin-bottom: 32px;
+        color: #263238;
+    }
+
+    &__button {
+        width: 178px;
+        height: 52px;
+        color: #F5F7FA;
+        border-radius: 4px;
+        font-size: 1rem;
+        background-color: #4CAF4F;
     }
 }
