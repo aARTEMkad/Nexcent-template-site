@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+input, textarea, select, button {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  border: none;
+  outline: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 62.5%;
+  margin: 0;
+  padding: 0;
+}
+
+.menu {
+  position: fixed;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #F5F7FA;
+  height: 85px;
+  width: 100%;
+}
+.menu__image {
+  height: 24px;
+  width: auto;
+  margin-left: 100px;
+}
+.menu__nav {
+  font-size: 1rem;
+}
+.menu__item {
+  margin: auto 25px auto 25px;
+}
+.menu__item:hover {
+  border-bottom: 1px solid #3a3a3a;
+}
+.menu__button {
+  height: 40px;
+  width: 90px;
+  border: none;
+  background-color: transparent;
+  border-radius: 6px;
+}
+.menu__button:hover {
+  box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.45);
+}
+.menu__button--login {
+  color: #4CAF4F;
+}
+.menu__button--signup {
+  color: #FFF;
+  background-color: #4CAF4F;
+}
+.menu__buttons {
+  display: inline-flex;
+  font-size: 0.9rem;
+  margin-right: 100px;
+  gap: 15px;
+}
+
+/*# sourceMappingURL=style.css.map */
