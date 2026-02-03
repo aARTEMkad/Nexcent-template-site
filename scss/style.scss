@@ -1,7 +1,16 @@
 @use "_style-reset";
 
-//Fonts
+// Fonts
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+// Variables
+$Primary: #4CAF4F;
+$Silver: #F5F7FA;
+$D_Grey: #4D4D4D;
+$Grey: #717171;
+$Black: #263238;
+$White: #FFF;
+
 
 body {
     font-family: "Inter", sans-serif;
@@ -20,7 +29,7 @@ main {
     display: inline-flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #F5F7FA;
+    background-color: $Silver;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     height: 85px;
     width: 100%;
@@ -33,10 +42,12 @@ main {
 
     &__nav {
         font-size: 1rem;
+        display: flex;
+        gap: 50px;
     }
 
-    &__item { 
-        margin: auto 25px auto 25px;
+    &__item      {
+        border-bottom: 1px solid rgba($color: #3a3a3a, $alpha: 0);
     }
 
     &__item:hover {
@@ -56,12 +67,12 @@ main {
     }
 
     &__button--login {
-        color: #4CAF4F;
+        color: $Primary;
     }
 
     &__button--signup {
-        color: #FFF;
-        background-color: #4CAF4F;
+        color: $White;
+        background-color: $Primary;
     }
 
     &__buttons {
@@ -77,9 +88,8 @@ main {
 
 
     &__intro {
-        background-color: #F5F7FA;
+        background-color: $Silver;
         padding: 96px 144px 96px 144px;
-        height: 600px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -94,20 +104,20 @@ main {
     &__subtitle {
         font-size: 1rem;
         margin-bottom: 32px;
-        color: #717171;
+        color: $Grey;
     }
 
     &__title--first {
-        color: #4D4D4D;
+        color: $D_Grey;
     }
 
     &__title--second {
-        color: #4CAF4F;
+        color: $Primary;
     }
 
     &__button {
-        background-color: #4CAF4F;
-        color: #FFF;
+        background-color: $Primary;
+        color: $White;
         border-radius: 4px;
         font-size: 1rem;
         height: 52px;
@@ -121,17 +131,18 @@ main {
 
         &-title {
             font-size: 2.6rem;
-            color: #4D4D4D;
+            color: $D_Grey;
         }
 
         &-subtitle {
             font-size: 1.1rem;
-            color: #717171;
+            color: $Grey;
             margin-bottom: 16px;
         }
 
         &-logos {
             display: inline-flex;
+            flex-shrink: 0;
             height: 100px;
             align-items: center;
             gap: 9vw;
@@ -147,18 +158,20 @@ main {
 
         &-title {
             font-size: 2.6rem;
-            color: #4D4D4D;
+            color: $D_Grey;
         }
 
         &-subtitle {
             margin: 10px 0px 16px 0px;
             font-size: 1.1rem;
-            color: #717171;
+            color: $Grey;
         }
 
         &-list {
          display: inline-flex;
-         gap: 10vw;
+         justify-content: center;
+         flex-wrap: wrap;
+         gap: 9vw;
         }
 
     }
@@ -178,13 +191,13 @@ main {
 
         &-title {
             font-size: 2rem;
-            color: #4D4D4D;
+            color: $D_Grey;
             margin-bottom: 10px;
         }
 
         &-text {
             font-size: 1rem;
-            color: #717171;
+            color: $Grey;
         }
     }
 }
@@ -198,19 +211,21 @@ main {
 
 .about {
     display: flex;
+    flex-wrap: wrap;
+    row-gap: 50px;
     justify-content: center;
     align-items: center;
     padding: 0px 144px 0px 144px;
     gap: auto;
 
     &__title {
-        color: #4D4D4D;
+        color: $D_Grey;
         font-size: 2rem;
     }
 
     &__subtitle {
         margin-top: 20px;
-        color: #717171;
+        color: $Grey;
         font-size: 1rem;
     }
 
@@ -218,16 +233,18 @@ main {
         margin-top: 32px;
         width: 151px;
         height: 52px;
-        color: #F5F7FA;
+        color: $Silver;
         border-radius: 4px;
         font-size: 1rem;
-        background-color: #4CAF4F;
+        background-color: $Primary;
     }
 }
 
 .stats {
-    background-color: #F5F7FA;
+    background-color: $Silver;
     display: flex;
+    row-gap: 40px;
+    flex-wrap: wrap;
     padding: 64px 144px 64px 144px;
     
     align-items: center;
@@ -256,12 +273,12 @@ main {
     &__number {
         font-size: 1.5rem;
         margin-bottom: 5px;
-        color: #4D4D4D;
+        color: $D_Grey;
     }
 
     &__label {
         font-size: 1rem;
-        color: #717171;
+        color: $Grey;
     }
 
 
@@ -269,49 +286,52 @@ main {
 
 .process {
     display: flex;
+    flex-wrap: wrap;
+    row-gap: 40px;
     justify-content: space-evenly;
     align-items: center;
 
     &__title {
         font-size: 2rem;
-        color: #4D4D4D;
+        color: $D_Grey;
         margin-bottom: 16px;
     }
 
     &__subtitle {
         font-size: 1rem;
-        color: #717171;
+        color: $Grey;
         margin-bottom: 32px;
     }
 
     &__button {
         height: 50px;
         width: 150px;
-        background-color: #4CAF4F;
+        background-color: $Primary;
         font-size: 1rem;
         border-radius: 4px;
-        color: #FFF;
+        color: $White;
     }
 }
 
 .testimonial {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 60px;
     padding: 35px 0px 0px 0px;
     align-items: center;
-    background-color: #F5F7FA;
+    background-color: $Silver;
 
 
     &__text {
         font-size: 1.2rem;
-        color: #717171;
+        color: $Grey;
         margin-bottom: 16px;
     }
 
     &__author {
         font-size: 1.5rem;
-        color: #4CAF4F;
+        color: $Primary;
         margin-bottom: 10px;
     }
 
@@ -327,7 +347,7 @@ main {
     }
 
     &__button {
-        color: #4CAF4F;
+        color: $Primary;
         background-color: transparent;
         width: 220px;
         height: 45px;
@@ -342,20 +362,21 @@ main {
 
     &__title {
         font-size: 2rem;
-        color: #4D4D4D;
+        color: $D_Grey;
         margin: 16px 0px 16px 0px;
     }
 
     &__subtitle {
         font-size: 1rem;
-        color: #717171;
+        color: $Grey;
     }
 
     &__list {
         display: flex;
+        flex-wrap: wrap;
         justify-content: center;
         align-items: center;
-        gap: 80px;
+        gap: 5%;
     }
 
     &__card {
@@ -363,12 +384,12 @@ main {
         width: 320px;
         height: 175px;
         padding: 16px;
-        background-color: #F5F7FA;
+        background-color: $Silver;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
         border-radius: 8px;
 
         &-text {
-            color: #717171;
+            color: $Grey;
             font-size: 1.3rem;
             margin-bottom: 16px;
         }
@@ -377,7 +398,7 @@ main {
             width: 285px;
             height: 45px;
             background-color: transparent;
-            color: #4CAF4F;
+            color: $Primary;
             font-size: 1.5rem;
         }
     }
@@ -389,31 +410,33 @@ main {
     text-align: center;
     font-size: 2rem;
     padding: 32px 0px 32px 0px;
-    background-color: #F5F7FA;
+    background-color: $Silver;
 
     &__title {
         margin-bottom: 32px;
-        color: #263238;
+        color: $Black;
     }
 
     &__button {
         width: 178px;
         height: 52px;
-        color: #F5F7FA;
+        color: $Silver;
         border-radius: 4px;
         font-size: 1rem;
-        background-color: #4CAF4F;
+        background-color: $Primary;
     }
 }
 
 .footer {
-    background-color: #263238;
+    background-color: $Black;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 180px;
+    column-gap: 180px;
+    row-gap: 50px;
     width: 100%;
-    color: #FFF;
+    color: $White;
 
     &__info {
         padding: 67px 50px 67px 0px;
@@ -422,13 +445,13 @@ main {
     &__copyright {
         margin: 50px 0px 10px 0px;
         font-size: 0.9rem;
-        color: #F5F7FA;
+        color: $Silver;
     }
 
     &__rights {
         font-size: 0.9rem;
         margin-bottom: 40px;
-        color: #F5F7FA;
+        color: $Silver;
     }
 
     &__socials {
@@ -439,6 +462,7 @@ main {
 
     &__columns {
         display: flex;
+        flex-wrap: wrap;
         gap: 50px;
     }
 
@@ -451,7 +475,7 @@ main {
         flex-direction: column;
         gap: 14px;
         margin-top: 15px;
-        color: #F5F7FA;
+        color: $Silver;
     }
 
     &__link {
