@@ -191,6 +191,9 @@ main {
 
 .page {
     margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
 }
 
 .about {
@@ -265,32 +268,120 @@ main {
 }
 
 .process {
-
-    &__media {
-
-    }
-
-    &__img {
-
-    }
-
-    &__content {
-
-    }
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 
     &__title {
-
+        font-size: 2rem;
+        color: #4D4D4D;
+        margin-bottom: 16px;
     }
 
     &__subtitle {
-
+        font-size: 1rem;
+        color: #717171;
+        margin-bottom: 32px;
     }
 
     &__button {
-        
+        height: 50px;
+        width: 150px;
+        background-color: #4CAF4F;
+        font-size: 1rem;
+        border-radius: 4px;
+        color: #FFF;
     }
 }
 
+.testimonial {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    padding: 35px 0px 0px 0px;
+    align-items: center;
+    background-color: #F5F7FA;
+
+
+    &__text {
+        font-size: 1.2rem;
+        color: #717171;
+        margin-bottom: 16px;
+    }
+
+    &__author {
+        font-size: 1.5rem;
+        color: #4CAF4F;
+        margin-bottom: 10px;
+    }
+
+    &__company {
+        font-size: 1.3rem;
+        color: #89939E;
+        margin-bottom: 20px;
+    }
+
+    &__logos {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__button {
+        color: #4CAF4F;
+        background-color: transparent;
+        width: 220px;
+        height: 45px;
+        font-size: 1.3rem;
+    }
+}
+
+
+.blog {
+    text-align: center;
+    margin-bottom: 128px;
+
+    &__title {
+        font-size: 2rem;
+        color: #4D4D4D;
+        margin: 16px 0px 16px 0px;
+    }
+
+    &__subtitle {
+        font-size: 1rem;
+        color: #717171;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 80px;
+    }
+
+    &__card {
+        margin-top: 200px;
+        width: 320px;
+        height: 175px;
+        padding: 16px;
+        background-color: #F5F7FA;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        border-radius: 8px;
+
+        &-text {
+            color: #717171;
+            font-size: 1.3rem;
+            margin-bottom: 16px;
+        }
+
+        &-button {
+            width: 285px;
+            height: 45px;
+            background-color: transparent;
+            color: #4CAF4F;
+            font-size: 1.5rem;
+        }
+    }
+}
 
 
 
@@ -298,6 +389,7 @@ main {
     text-align: center;
     font-size: 2rem;
     padding: 32px 0px 32px 0px;
+    background-color: #F5F7FA;
 
     &__title {
         margin-bottom: 32px;
@@ -312,4 +404,68 @@ main {
         font-size: 1rem;
         background-color: #4CAF4F;
     }
+}
+
+.footer {
+    background-color: #263238;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 180px;
+    width: 100%;
+    color: #FFF;
+
+    &__info {
+        padding: 67px 50px 67px 0px;
+    }
+
+    &__copyright {
+        margin: 50px 0px 10px 0px;
+        font-size: 0.9rem;
+        color: #F5F7FA;
+    }
+
+    &__rights {
+        font-size: 0.9rem;
+        margin-bottom: 40px;
+        color: #F5F7FA;
+    }
+
+    &__socials {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__columns {
+        display: flex;
+        gap: 50px;
+    }
+
+    &__title {
+        font-size: 1.5rem;
+    }
+
+    &__nav {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        margin-top: 15px;
+        color: #F5F7FA;
+    }
+
+    &__link {
+        font-size: 1rem;
+    }
+
+    &__input {
+        margin-top: 30px;
+        background-color: #515B60;
+        color: #D8DBE1;
+        width: 255px;
+        height: 40px;
+        font-size: 1rem;
+        border-radius: 8px;
+    }
+
 }
