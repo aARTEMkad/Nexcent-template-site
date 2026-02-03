@@ -1,5 +1,8 @@
 @use "_style-reset";
 
+@use "abstracts/breakpoints" as *;
+@use "abstracts/mixins" as *;
+
 // Fonts
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
@@ -10,7 +13,6 @@ $D_Grey: #4D4D4D;
 $Grey: #717171;
 $Black: #263238;
 $White: #FFF;
-
 
 body {
     font-family: "Inter", sans-serif;
@@ -30,6 +32,7 @@ main {
     justify-content: space-between;
     align-items: center;
     background-color: $Silver;
+    padding: 0px 100px 0px 100px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     height: 85px;
     width: 100%;
@@ -37,13 +40,12 @@ main {
     &__image {
         height: 24px;
         width: auto;
-        margin-left: 100px;
     }
 
     &__nav {
         font-size: 1rem;
         display: flex;
-        gap: 50px;
+        gap: 2vw;
     }
 
     &__item      {
@@ -78,22 +80,54 @@ main {
     &__buttons {
         display: inline-flex;
         font-size: 0.9rem;
-        margin-right: 100px;
         gap: 15px;
+    }
+
+    &__burger {
+        display: none;
+    }
+
+    @include down($tablet) {
+        justify-content: space-between;
+        padding: 0px 10% 0px 10%;
+
+        &__nav {
+            display: none;
+        }
+
+        &__buttons {
+            display: none;
+        }
+
+        &__burger {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            width: 50px;
+            height: 50px;
+        }
+
+        &__burger-line {
+            width: 100%;
+            height: 7px;
+            border-radius: 2px;
+            background-color: #4CAF4F;
+        }
     }
 }
 
 .hero {
     width: 100%;
 
-
     &__intro {
         background-color: $Silver;
         padding: 96px 144px 96px 144px;
         display: flex;
+        flex-wrap: wrap-reverse;
         align-items: center;
         justify-content: center;
-        gap: 104px;
+        column-gap: 100px;
+        row-gap: 50px;
     }
 
     &__title {
@@ -124,6 +158,11 @@ main {
         width: 128px;
     }
 
+    &__image {
+        // max-width: none;
+        width: auto;
+        height: auto;
+    }
 
     &__clients {
         text-align: center;
@@ -200,6 +239,19 @@ main {
             color: $Grey;
         }
     }
+
+
+    @include down($tablet) {
+        
+
+        &__title {
+            font-size: 3rem;
+        }
+
+        &__clients-logos {
+            gap: 7vw;
+        }
+    }
 }
 
 .page {
@@ -216,7 +268,6 @@ main {
     justify-content: center;
     align-items: center;
     padding: 0px 144px 0px 144px;
-    gap: auto;
 
     &__title {
         color: $D_Grey;
@@ -237,6 +288,10 @@ main {
         border-radius: 4px;
         font-size: 1rem;
         background-color: $Primary;
+    }
+
+    @include down($tablet) {
+        padding: 0px 30px 0px 30px;    
     }
 }
 
@@ -311,6 +366,14 @@ main {
         border-radius: 4px;
         color: $White;
     }
+
+    @include down($tablet) {
+        
+
+        &__content {
+            padding: 0px 30px 0px 30px;
+        }
+    }
 }
 
 .testimonial {
@@ -352,6 +415,19 @@ main {
         width: 220px;
         height: 45px;
         font-size: 1.3rem;
+    }
+
+    @include down($tablet) {
+        padding-bottom: 20px;
+
+
+        br {
+            display: none;
+        }
+
+        &__content {
+            padding: 0px 30px 0px 30px;
+        }
     }
 }
 
@@ -401,6 +477,15 @@ main {
             color: $Primary;
             font-size: 1.5rem;
         }
+    }
+
+    @include down($tablet) {        
+        padding: 0px 30px 0px 30px;
+
+        br {
+            display: none;
+        }
+
     }
 }
 
