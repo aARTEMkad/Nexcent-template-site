@@ -229,8 +229,27 @@ main {
   .hero__title {
     font-size: 3rem;
   }
+  .hero__intro {
+    padding: 96px 100px 96px 100px;
+  }
   .hero__clients-logos {
     gap: 7vw;
+  }
+  .hero__features {
+    margin: 0px 5px 0px 5px;
+  }
+  .hero__clients-logo:nth-child(n+6) {
+    display: none;
+  }
+}
+@media (max-width: 425px) {
+  .hero__clients-logo:nth-child(n+5) {
+    display: none;
+  }
+}
+@media (max-width: 425px) {
+  .hero__intro {
+    padding: 96px 10px 96px 10px;
   }
 }
 
@@ -306,6 +325,11 @@ main {
 .stats__label {
   font-size: 1rem;
   color: #717171;
+}
+@media (max-width: 768px) {
+  .stats {
+    padding: 64px 5px 64px 5px;
+  }
 }
 
 .process {
@@ -385,6 +409,11 @@ main {
     padding: 0px 30px 0px 30px;
   }
 }
+@media (max-width: 425px) {
+  .testimonial__logo:nth-child(n+3) {
+    display: none;
+  }
+}
 
 .blog {
   text-align: center;
@@ -435,6 +464,13 @@ main {
     display: none;
   }
 }
+@media (max-width: 425px) {
+  .blog__card {
+    width: none;
+    height: none;
+    padding: 10px 5px 10px 5px;
+  }
+}
 
 .cta {
   text-align: center;
@@ -454,6 +490,11 @@ main {
   font-size: 1rem;
   background-color: #4CAF4F;
 }
+@media (max-width: 425px) {
+  .cta__title {
+    font-size: 1.8rem;
+  }
+}
 
 .footer {
   background-color: #263238;
@@ -465,6 +506,7 @@ main {
   row-gap: 50px;
   width: 100%;
   color: #FFF;
+  padding-bottom: 100px;
 }
 .footer__info {
   padding: 67px 50px 67px 0px;
@@ -486,6 +528,7 @@ main {
 }
 .footer__columns {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 50px;
 }

@@ -248,8 +248,32 @@ main {
             font-size: 3rem;
         }
 
+        &__intro {
+            padding: 96px 100px 96px 100px;
+        }
+
         &__clients-logos {
             gap: 7vw;
+        }
+
+        &__features {
+            margin: 0px 5px 0px 5px;
+        }
+
+        &__clients-logo:nth-child(n+6) {
+            display: none;
+        }
+    }
+
+    @include down($phone) {
+        &__clients-logo:nth-child(n+5) {
+            display: none;
+        }
+    }
+
+    @include down($phone) {
+        &__intro {
+            padding: 96px 10px 96px 10px;
         }
     }
 }
@@ -336,7 +360,9 @@ main {
         color: $Grey;
     }
 
-
+    @include down($tablet) {
+        padding: 64px 5px 64px 5px;
+    }
 }
 
 .process {
@@ -429,6 +455,12 @@ main {
             padding: 0px 30px 0px 30px;
         }
     }
+
+    @include down($phone) {
+        &__logo:nth-child(n+3) {
+            display: none;
+        }
+    }
 }
 
 
@@ -487,6 +519,15 @@ main {
         }
 
     }
+
+    @include down($phone) {        
+        &__card {
+            width: none;
+            height: none;
+            padding: 10px 5px 10px 5px;
+        }
+
+    }
 }
 
 
@@ -510,6 +551,13 @@ main {
         font-size: 1rem;
         background-color: $Primary;
     }
+
+    @include down($phone) {        
+        &__title {
+            font-size: 1.8rem;
+        }
+
+    }
 }
 
 .footer {
@@ -522,6 +570,7 @@ main {
     row-gap: 50px;
     width: 100%;
     color: $White;
+    padding-bottom: 100px;
 
     &__info {
         padding: 67px 50px 67px 0px;
@@ -547,6 +596,7 @@ main {
 
     &__columns {
         display: flex;
+        justify-content: center;
         flex-wrap: wrap;
         gap: 50px;
     }
