@@ -21,13 +21,10 @@ body {
     padding: 0;
 }
 
-main {
-    padding-top: 85px;
-}
-
 
 .menu {
     position: fixed;
+    z-index: 2;
     display: inline-flex;
     justify-content: space-between;
     align-items: center;
@@ -87,6 +84,81 @@ main {
         display: none;
     }
 
+
+
+    &-overlay {
+        display: block;
+        position: fixed;
+        background-color: #00000079;
+        margin-top: auto;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+
+    &-overlay.is-open {
+        opacity: 1;
+        transition: opacity 0.5s ease;
+    }
+
+    &-mobile {
+        display: block;
+        padding: 20px;
+        position: fixed;
+        width: 70%;
+        top: 0px;
+        left: 50%;
+        transform: translateX(-50%) translateY(-100%);
+        transition: transform 1s ease;
+        border-radius: 4px;
+        background-color: #4CAF4F;
+        
+
+        &__nav {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        &__item {
+            margin: 10px 0px 10px 0px;
+            font-size: 1.8rem;
+            color: #D8DBE1;
+        }
+
+        &__buttons {
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+            gap: 40px;
+        }
+
+        &__button {
+            @extend .menu__button;
+            width: 100%;
+            font-size: 1rem;
+            color: $White;
+        }
+
+        &__button--login {
+            background-color: #3a3a3a;
+        }
+
+        &__button--signup {
+            background-color: #3a3a3a;
+        }
+    }
+
+    &-mobile.is-open {
+        transition: transform 1s ease;
+        transform: translateX(-50%) translateY(85px);
+    }
+
+
+
     @include down($tablet) {
         justify-content: space-between;
         padding: 0px 10% 0px 10%;
@@ -118,6 +190,7 @@ main {
 
 .hero {
     width: 100%;
+    padding-top: 85px;
 
     &__intro {
         background-color: $Silver;
@@ -361,7 +434,27 @@ main {
     }
 
     @include down($tablet) {
-        padding: 64px 5px 64px 5px;
+        padding: 64px 10px 64px 10px;
+
+        &__media {
+            width: 38px;
+            height: auto;
+        }
+
+        &__item {
+            gap: 8px;
+        }   
+
+        &__number {
+            font-size: 1rem;
+            margin-bottom: 5px;
+            color: $D_Grey;
+        }
+
+        &__label {
+            font-size: 0.8rem;
+            color: $Grey;
+        }
     }
 }
 
