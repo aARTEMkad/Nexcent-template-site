@@ -2,17 +2,10 @@
 
 @use "abstracts/breakpoints" as *;
 @use "abstracts/mixins" as *;
+@use "abstracts/colors" as *;
 
 // Fonts
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-
-// Variables
-$Primary: #4CAF4F;
-$Silver: #F5F7FA;
-$D_Grey: #4D4D4D;
-$Grey: #717171;
-$Black: #263238;
-$White: #FFF;
 
 body {
     font-family: "Inter", sans-serif;
